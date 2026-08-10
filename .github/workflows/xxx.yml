@@ -4,6 +4,6 @@ jobs:
   pnpm-build:
     runs-on: ubuntu-latest
     steps:
+      - uses: pnpm/setup@v1
       - run: pnpm --version
-      - run: pnpm install
       - run: pnpm build
