@@ -1,12 +1,7 @@
 on: push
 
 jobs:
-  job1:
+  pnpm-build:
     runs-on: ubuntu-latest
     steps:
-      - run: pwd
-      - run: ls
-  job2:
-    runs-on: ubuntu-latest
-    steps:
-      - run: node --version
+      - run: pnpm build
