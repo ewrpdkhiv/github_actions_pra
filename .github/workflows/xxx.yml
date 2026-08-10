@@ -6,7 +6,7 @@ jobs:
   pnpm-build:
     runs-on: ubuntu-latest
     steps:
-      - name: 不明的動作
+      - name: 把程式碼放入執行環境
         uses: actions/checkout@v6
 
       - name: 設定pnpm
