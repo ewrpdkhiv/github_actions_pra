@@ -2,6 +2,9 @@ name: 打包React項目
 
 on: push
 
+permissions:
+  contents: write
+
 jobs:
   pnpm-build:
     runs-on: ubuntu-latest
