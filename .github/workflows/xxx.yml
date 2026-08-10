@@ -13,12 +13,10 @@ jobs:
           version: 11
           runtime: node@22
           cache: true
-          install: false
+      #     install: false
 
-      - name: 手動安裝
-        run: pnpm install
-        env:
-          PNPM_CONFIG_MINIMUM_RELEASE_AGE: 0
+      # - name: 手動安裝
+      #   run: pnpm install
 
       - name: 檢查 pnpm 版本
         run: pnpm --version
