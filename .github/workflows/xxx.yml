@@ -1,3 +1,5 @@
+name: 打包React項目
+
 on: push
 
 jobs:
