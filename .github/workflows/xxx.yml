@@ -4,14 +4,24 @@ jobs:
   pnpm-build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/setup@v1
+      - name: 不明的動作
+        uses: actions/checkout@v6
+
+      - name: 設定pnpm
+        uses: pnpm/setup@v1
         with:
           version: 11
           runtime: node@22
           cache: true
-      - run: pnpm install
+          install: false
+
+      - name: 手動安裝
+        run: pnpm install
         env:
           PNPM_CONFIG_MINIMUM_RELEASE_AGE: 0
-      - run: pnpm --version
-      - run: pnpm build
+
+      - name: 檢查 pnpm 版本
+        run: pnpm --version
+
+      - name: 編譯
+        run: pnpm build
